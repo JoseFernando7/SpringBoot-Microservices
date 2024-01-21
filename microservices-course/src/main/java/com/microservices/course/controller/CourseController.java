@@ -21,6 +21,7 @@ public class CourseController
         courseService.save(course);
     }
 
+    // No asegurar
     @GetMapping("/")
     public ResponseEntity<?> findAllCourses()
     {
@@ -33,6 +34,7 @@ public class CourseController
         return ResponseEntity.ok(courseService.findById(id));
     }
 
+    // Asegurar
     @GetMapping("/search-students/{idCourse}")
     public ResponseEntity<?> findStudentsByCourseId(@PathVariable Long idCourse)
     {
